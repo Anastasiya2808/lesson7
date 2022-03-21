@@ -21,7 +21,8 @@ abstract public class Unit {
         return healthScore;
     }
 
-    // добавить здоровье, но не больше изначального
+    // увеличить здоровье на healthScore, но не больше изначального,
+    // если персонаж жив
     public void plusHealth (int healthScore){
         if ( !isAlive()) return;
         this.healthScore = Math.min(this.healthScore + healthScore,maxHealthScore);
@@ -36,4 +37,6 @@ abstract public class Unit {
     public boolean isAlive(){
         return healthScore > 0; // вернет
     }
+    // абстрактный метод - метод без реализации (буз {})
+    public abstract void rest ();
 }
