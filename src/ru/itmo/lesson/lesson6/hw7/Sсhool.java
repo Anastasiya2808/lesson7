@@ -2,11 +2,12 @@ package ru.itmo.lesson.lesson6.hw7;
 
 public class Sсhool {
     private String name;
+    private Director director;
+
 
     public String getName() {
         return name;
     }
-    private Director director;
     private Teacher[] teachers = new Teacher[3];
     private Student[] students = new Student[10];
 
